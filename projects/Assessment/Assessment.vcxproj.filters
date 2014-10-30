@@ -42,10 +42,13 @@
     <ClCompile Include="source\AnimationTutorial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\ShadowTutorial.cpp">
+    <ClCompile Include="include\Tutorial12_Shadows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\ShadowMappingTutorial.cpp">
+    <ClCompile Include="source\Tutorial7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GPUParticleSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,10 +74,13 @@
     <ClInclude Include="include\AnimationTutorial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\ShadowTutorial.h">
+    <ClInclude Include="include\Tutorial12_Shadows.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\ShadowMappingTutorial.h">
+    <ClInclude Include="include\Tutorial7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GPUParticleSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -143,6 +149,18 @@
       <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="resources\shaders\ShadowQuadVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\particle.frag">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\particle.geom">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\particle.vert">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\particleUpdate.vert">
       <Filter>Resource Files\shaders</Filter>
     </None>
   </ItemGroup>

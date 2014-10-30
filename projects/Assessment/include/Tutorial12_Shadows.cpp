@@ -41,8 +41,8 @@ bool Tutorial12_Shadows::onCreate(int a_argc, char* a_argv[])
 
 
 	//Render to target shader.
-	GLuint rtt_vs = Utility::loadShader("shadowMapRTT.vert", GL_VERTEX_SHADER);
-	GLuint rtt_fs = Utility::loadShader("shadowMapRTT.frag", GL_FRAGMENT_SHADER);
+	GLuint rtt_vs = Utility::loadShader("shaders/shadowMapRTT.vert", GL_VERTEX_SHADER);
+	GLuint rtt_fs = Utility::loadShader("shaders/shadowMapRTT.frag", GL_FRAGMENT_SHADER);
 
 	m_depthProgram = Utility::createProgram(rtt_vs, 0, 0, 0, rtt_fs);
 
@@ -50,8 +50,8 @@ bool Tutorial12_Shadows::onCreate(int a_argc, char* a_argv[])
 	glDeleteShader(rtt_fs);
 
 	//Debugging Quad shader.
-	GLuint quad_vs = Utility::loadShader("QuadShadow.vert", GL_VERTEX_SHADER);
-	GLuint quad_fs = Utility::loadShader("QuadShadow.frag", GL_FRAGMENT_SHADER);
+	GLuint quad_vs = Utility::loadShader("shaders/QuadShadow.vert", GL_VERTEX_SHADER);
+	GLuint quad_fs = Utility::loadShader("shaders/QuadShadow.frag", GL_FRAGMENT_SHADER);
 
 	m_2dprogram = Utility::createProgram(quad_vs, 0, 0, 0, quad_fs);
 
@@ -59,8 +59,8 @@ bool Tutorial12_Shadows::onCreate(int a_argc, char* a_argv[])
 	glDeleteShader(quad_fs);
 
 	//Standard rendering shader.
-	GLuint vs = Utility::loadShader("ShadowMap.vert", GL_VERTEX_SHADER);
-	GLuint fs = Utility::loadShader("ShadowMap.frag", GL_FRAGMENT_SHADER);
+	GLuint vs = Utility::loadShader("shaders/ShadowMap.vert", GL_VERTEX_SHADER);
+	GLuint fs = Utility::loadShader("shaders/ShadowMap.frag", GL_FRAGMENT_SHADER);
 
 	m_program = Utility::createProgram(vs, 0, 0, 0, fs);
 
@@ -70,7 +70,7 @@ bool Tutorial12_Shadows::onCreate(int a_argc, char* a_argv[])
 	createShadowBuffer();
 	
 	m_fbx = new FBXFile();
-	if (!m_fbx->load("models/soulspear/soulspear.fbx", FBXFile::UNITS_CENTIMETER))
+	if (!m_fbx->load("models/ruinedtank/tank.fbx", FBXFile::UNITS_CENTIMETER))
 	{
 		printf("FBX file could not be loaded!");
 	}
@@ -79,6 +79,21 @@ bool Tutorial12_Shadows::onCreate(int a_argc, char* a_argv[])
 	InitFBXSceneResource(m_fbx);
 
 	create2DQuad();
+
+	//basic plane stuff here ~
+
+	m_texture.LoadTexture("images/decayTexture.png");
+	Utility::build3DPlane(10, m_vao, m_vbo, m_ibo); 
+
+	GLuint vert = Utility::loadShader("shaders/TextureTutorialVS.glsl", GL_VERTEX_SHADER);
+	GLuint frag = Utility::loadShader("shaders/TextureTutorialFS.glsl", GL_FRAGMENT_SHADER);
+
+	m_planeShader = Utility::createProgram(vert, 0, 0, 0, frag);
+
+	glDeleteShader(vert);
+	glDeleteShader(frag);
+
+
 
 	return true;
 }
@@ -129,9 +144,9 @@ void Tutorial12_Shadows::onDraw()
 
 	RenderFBXSceneResource(m_fbx, viewMatrix, m_projectionMatrix);
 
-
+	//plane stuff here
 	
-
+	
 }
 
 void Tutorial12_Shadows::onDestroy()
@@ -148,20 +163,6 @@ void Tutorial12_Shadows::onDestroy()
 	m_fbx = NULL;
 }
 
-// main that controls the creation/destruction of an application
-int main(int argc, char* argv[])
-{
-	// explicitly control the creation of our application
-	Application* app = new Tutorial12_Shadows();
-
-	if (app->create("AIE - Tutorial12_Shadows", DEFAULT_SCREENWIDTH, DEFAULT_SCREENHEIGHT, argc, argv) == true)
-		app->run();
-
-	// explicitly control the destruction of our application
-	delete app;
-
-	return 0;
-}
 
 void Tutorial12_Shadows::InitFBXSceneResource(FBXFile * a_pScene)
 {
@@ -246,6 +247,7 @@ void Tutorial12_Shadows::RenderFBXSceneResource(FBXFile * a_pScene, glm::mat4 a_
 
 	//RTT
 	glBindFramebuffer(GL_FRAMEBUFFER, m_shadowFramebuffer);
+
 	//glViewport(0, 0, m_shadowWidth, m_shadowHeight);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glUseProgram(m_depthProgram);

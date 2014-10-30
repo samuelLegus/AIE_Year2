@@ -11,25 +11,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\Tutorial12_Shadows.cpp" />
     <ClCompile Include="source\AdvancedTextureTutorial.cpp" />
     <ClCompile Include="source\AnimationTutorial.cpp" />
     <ClCompile Include="source\Assessment.cpp" />
+    <ClCompile Include="source\GPUParticleSystem.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\NormalMappingTutorial.cpp" />
-    <ClCompile Include="source\ShadowMappingTutorial.cpp" />
-    <ClCompile Include="source\ShadowTutorial.cpp" />
     <ClCompile Include="source\TesselationTutorial.cpp" />
+    <ClCompile Include="source\Tutorial7.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AdvancedTextureTutorial.h" />
     <ClInclude Include="include\AnimationTutorial.h" />
     <ClInclude Include="include\Assessment.h" />
+    <ClInclude Include="include\GPUParticleSystem.h" />
     <ClInclude Include="include\NormalMappingTutorial.h" />
-    <ClInclude Include="include\ShadowMappingTutorial.h" />
-    <ClInclude Include="include\ShadowTutorial.h" />
     <ClInclude Include="include\TesselationTutorial.h" />
     <ClInclude Include="include\Texture.h" />
     <ClInclude Include="include\TextureTutorial.h" />
+    <ClInclude Include="include\Tutorial12_Shadows.h" />
+    <ClInclude Include="include\Tutorial7.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\models\soulspear\soulspear.fbx" />
@@ -46,6 +48,10 @@
     <None Include="resources\shaders\FBXDecayVS.glsl" />
     <None Include="resources\shaders\NormalMapFS.glsl" />
     <None Include="resources\shaders\NormalMapVS.glsl" />
+    <None Include="resources\shaders\particle.frag" />
+    <None Include="resources\shaders\particle.geom" />
+    <None Include="resources\shaders\particle.vert" />
+    <None Include="resources\shaders\particleUpdate.vert" />
     <None Include="resources\shaders\ShadowMapRTT_FS.glsl" />
     <None Include="resources\shaders\ShadowMapRenderFS.glsl" />
     <None Include="resources\shaders\ShadowMapRenderVS.glsl" />

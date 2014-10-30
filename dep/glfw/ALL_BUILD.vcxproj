@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{826001B1-4D4A-42A5-9147-82EC7E73EAFA}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\bin\cmake.exe -HC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw -BC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw --check-stamp-file C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindOpenGL.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindThreads.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckIncludeFiles.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckLibraryExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckSymbolExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeConfigurableFile.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindDoxygen.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\docs\Doxyfile.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw_config.h.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfig.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfigVersion.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw3.pc.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\cmake_uninstall.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\bin\cmake.exe -HC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw -BC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw --check-stamp-file C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindOpenGL.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindThreads.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckIncludeFiles.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckLibraryExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckSymbolExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeConfigurableFile.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindDoxygen.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\docs\Doxyfile.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw_config.h.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfig.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfigVersion.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw3.pc.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\cmake_uninstall.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\bin\cmake.exe -HC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw -BC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw --check-stamp-file C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindOpenGL.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindThreads.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckIncludeFiles.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckLibraryExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckSymbolExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeConfigurableFile.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindDoxygen.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\docs\Doxyfile.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw_config.h.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfig.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfigVersion.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw3.pc.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\cmake_uninstall.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\bin\cmake.exe -HC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw -BC:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw --check-stamp-file C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeLists.txt;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\3.0.2\CMakeCCompiler.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindOpenGL.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindThreads.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckIncludeFiles.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckLibraryExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CheckSymbolExists.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeConfigurableFile.in;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindDoxygen.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Users\samuel.legus\Downloads\cmake-3.0.2-win32-x86\cmake-3.0.2-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\docs\Doxyfile.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw_config.h.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfig.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfwConfigVersion.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\src\glfw3.pc.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\cmake_uninstall.cmake.in;C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\695992d07950403fc8c432730ad16235\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeFiles/695992d07950403fc8c432730ad16235/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeFiles/695992d07950403fc8c432730ad16235/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeFiles/695992d07950403fc8c432730ad16235/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/CMakeFiles/695992d07950403fc8c432730ad16235/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\samuel.legus\Documents\GitHub\AIEFramework\dep\glfw\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/ZERO_CHECK.vcxproj">
+      <Project>7EA5DC65-DBC9-447D-9EE0-F07E422050AE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/accuracy.vcxproj">
+      <Project>7D327475-5836-4D21-9A42-2ADB7F35F751</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/boing.vcxproj">
+      <Project>1AE81344-D211-42AB-8FC5-8765C49378F8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/clipboard.vcxproj">
+      <Project>36A0A2CE-F21F-4385-A44C-B9E60E916CA4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/cursor.vcxproj">
+      <Project>94153ED8-9A59-49D4-A1D3-F492B8B7D788</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/cursoranim.vcxproj">
+      <Project>6CE83795-E71C-486D-B583-44DDCEB167BA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/defaults.vcxproj">
+      <Project>7DAE2BDF-1CAC-4FCA-9CE8-6542C77B7D01</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/empty.vcxproj">
+      <Project>B934BED1-D176-477F-9694-E1EC0C712045</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/events.vcxproj">
+      <Project>0F979170-2BC2-4E30-AB41-8E45383D15FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/fsaa.vcxproj">
+      <Project>ABBCC2DD-9766-45CD-894D-74872EB10E0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/gamma.vcxproj">
+      <Project>AEC7226A-3D6E-475E-BC19-25CC671F04C0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/gears.vcxproj">
+      <Project>91F7B030-03C4-4A93-AE46-6FADC03B154F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/src/glfw.vcxproj">
+      <Project>ED8CECBB-8DC5-48C0-A3AD-D939443E86B1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/glfwinfo.vcxproj">
+      <Project>25876DFC-AE8F-44F4-A388-8BC60ABCDAA8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/heightmap.vcxproj">
+      <Project>B4AF39BF-92D9-438E-8B46-9D50BC468479</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/iconify.vcxproj">
+      <Project>70082587-6D92-4F4A-8313-C4BE3C50E54C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/joysticks.vcxproj">
+      <Project>DF189543-394E-41A5-AD9D-67BA8EA3989E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/modes.vcxproj">
+      <Project>695B6224-703D-4079-9141-527DB04132B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/particles.vcxproj">
+      <Project>D0C4461C-5E6D-47C4-8538-AE4EEC2FA14F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/peter.vcxproj">
+      <Project>603F6CD6-4D2E-4B3A-8FCE-75A9EBA5969C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/reopen.vcxproj">
+      <Project>02BA0329-47C2-4A48-8516-0D893554B263</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/sharing.vcxproj">
+      <Project>29E377B4-E484-45DF-9153-18D6CC7231F2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/simple.vcxproj">
+      <Project>8544BDD2-326D-4CBE-808A-F65B8812E534</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/splitview.vcxproj">
+      <Project>48735489-818C-40BC-9E1B-76843D8C0730</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/tearing.vcxproj">
+      <Project>0E39BE2F-CD60-4379-8800-28D40BA754D9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/threads.vcxproj">
+      <Project>CB29272D-E2DF-4B35-A83B-711E839CEC8D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/title.vcxproj">
+      <Project>C03F74E2-8458-4EAE-9E6B-A82C648C04C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/examples/wave.vcxproj">
+      <Project>C5C9C86D-A904-4A7F-832D-F2C904D57EB5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/samuel.legus/Documents/GitHub/AIEFramework/dep/glfw/tests/windows.vcxproj">
+      <Project>B56545C7-2C96-419C-BFF4-2E4EFCACE4EB</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

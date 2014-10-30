@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AdvancedTextureTutorial.cpp" />
+    <ClCompile Include="source\AnimationTutorial.cpp" />
+    <ClCompile Include="source\Assessment.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\NormalMappingTutorial.cpp" />
+    <ClCompile Include="source\ShadowMappingTutorial.cpp" />
+    <ClCompile Include="source\ShadowTutorial.cpp" />
+    <ClCompile Include="source\TesselationTutorial.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AdvancedTextureTutorial.h" />
+    <ClInclude Include="include\AnimationTutorial.h" />
+    <ClInclude Include="include\Assessment.h" />
+    <ClInclude Include="include\NormalMappingTutorial.h" />
+    <ClInclude Include="include\ShadowMappingTutorial.h" />
+    <ClInclude Include="include\ShadowTutorial.h" />
+    <ClInclude Include="include\TesselationTutorial.h" />
+    <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\TextureTutorial.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\models\soulspear\soulspear.fbx" />
+    <None Include="resources\models\stanford\Bunny.fbx" />
+    <None Include="resources\shaders\AnimationFS.glsl" />
+    <None Include="resources\shaders\AnimationVS.glsl" />
+    <None Include="resources\shaders\DisplaceControl.glsl" />
+    <None Include="resources\shaders\DisplaceEval.glsl" />
+    <None Include="resources\shaders\DisplaceFS.glsl" />
+    <None Include="resources\shaders\DisplaceVS.glsl" />
+    <None Include="resources\shaders\FBXBasicFS.glsl" />
+    <None Include="resources\shaders\FBXBasicVS.glsl" />
+    <None Include="resources\shaders\FBXDecayFS.glsl" />
+    <None Include="resources\shaders\FBXDecayVS.glsl" />
+    <None Include="resources\shaders\NormalMapFS.glsl" />
+    <None Include="resources\shaders\NormalMapVS.glsl" />
+    <None Include="resources\shaders\ShadowMapRTT_FS.glsl" />
+    <None Include="resources\shaders\ShadowMapRenderFS.glsl" />
+    <None Include="resources\shaders\ShadowMapRenderVS.glsl" />
+    <None Include="resources\shaders\ShadowMapRTT_VS.glsl" />
+    <None Include="resources\shaders\ShadowQuadFS.glsl" />
+    <None Include="resources\shaders\ShadowQuadVS.glsl" />
+    <None Include="resources\shaders\TextureTutorialFS.glsl" />
+    <None Include="resources\shaders\TextureTutorialVS.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\decay.png" />
+    <Image Include="resources\images\lightningTexture.png" />
+    <Image Include="resources\images\metallicTexture.png" />
+    <Image Include="resources\images\rock_diffuse.tga" />
+    <Image Include="resources\images\rock_displacement.tga" />
+    <Image Include="resources\models\soulspear\soulspear_diffuse.tga" />
+    <Image Include="resources\models\soulspear\soulspear_normal.tga" />
+    <Image Include="resources\models\soulspear\soulspear_specular.tga" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{47bc6d87-71e3-4eb9-881b-e1f16661ae1b}</ProjectGuid>
+    <RootNamespace>Assessment</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)../inc;$(SolutionDir)../dep/stb;$(SolutionDir)../dep/glfw/include;$(SolutionDir)../dep/glew/include;$(SolutionDir)../dep/glm;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(ProjectDir)\include</IncludePath>
+    <LibraryPath>$(SolutionDir)../lib/vs2013;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <OutDir>$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <SourcePath>$(ProjectDir)\source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)../inc;$(SolutionDir)../dep/stb;$(SolutionDir)../dep/glfw/include;$(SolutionDir)../dep/glew/include;$(SolutionDir)../dep/glm;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)../lib/vs2013;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;GLM_SWIZZLE;GLM_FORCE_RADIANS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FBXLoader_d.lib;AIEFramework_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;GLM_SWIZZLE;GLM_FORCE_RADIANS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>FBXLoader.lib;AIEFramework.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

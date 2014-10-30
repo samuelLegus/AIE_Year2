@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{cb01428a-94cb-41a6-92e5-d4b5b51f6529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\models">
+      <UniqueIdentifier>{d635788d-5f8e-4636-9edd-6b50ef511a90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{9ab5fa1f-784f-4f6d-bf5e-b0b728314516}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Assessment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AdvancedTextureTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\NormalMappingTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TesselationTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AnimationTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ShadowTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ShadowMappingTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Assessment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TextureTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AdvancedTextureTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NormalMappingTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TesselationTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AnimationTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ShadowTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ShadowMappingTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\shaders\TextureTutorialFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\TextureTutorialVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\FBXBasicVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\FBXBasicFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\models\soulspear\soulspear.fbx">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="resources\shaders\FBXDecayFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\FBXDecayVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\NormalMapFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\NormalMapVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\DisplaceFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\DisplaceVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\DisplaceControl.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\DisplaceEval.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\AnimationFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\AnimationVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowMapRenderFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowMapRenderVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\models\stanford\Bunny.fbx">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowMapRTT_FS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowMapRTT_VS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowQuadFS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="resources\shaders\ShadowQuadVS.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\lightningTexture.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\images\decay.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\images\metallicTexture.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\models\soulspear\soulspear_diffuse.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\models\soulspear\soulspear_normal.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\models\soulspear\soulspear_specular.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\images\rock_diffuse.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\images\rock_displacement.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

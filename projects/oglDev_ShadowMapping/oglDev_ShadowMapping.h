@@ -2,6 +2,9 @@
 
 #include "Application.h"
 #include <glm/glm.hpp>
+#include "ShadowMapFBO.h"
+#include "ShadowMap.h"
+#include "Lighting.h"
 
 // derived application class that wraps up all globals neatly
 class oglDev_ShadowMapping : public Application
@@ -23,5 +26,7 @@ protected:
 
 	void RenderScene();
 
-	
+	void ShadowMapPass();
+	void RenderPass();
+
 };

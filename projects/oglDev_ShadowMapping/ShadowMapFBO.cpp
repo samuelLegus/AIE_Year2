@@ -1,4 +1,5 @@
 #include "ShadowMapFBO.h"
+#include "Global.h"
 #include <stdio.h>
 
 ShadowMapFBO::ShadowMapFBO()

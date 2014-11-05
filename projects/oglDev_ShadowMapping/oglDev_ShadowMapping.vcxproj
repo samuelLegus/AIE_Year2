@@ -77,14 +77,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lighting.cpp" />
     <ClCompile Include="oglDev_ShadowMapping.cpp" />
+    <ClCompile Include="ShadowMap.cpp" />
     <ClCompile Include="ShadowMapFBO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Lighting.h" />
     <ClInclude Include="oglDev_ShadowMapping.h" />
+    <ClInclude Include="ShadowMap.h" />
     <ClInclude Include="ShadowMapFBO.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="lighting.frag" />
+    <None Include="lighting.vert" />
     <None Include="shadowMap.frag" />
     <None Include="shadowMap.vert" />
   </ItemGroup>

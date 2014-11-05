@@ -21,6 +21,12 @@
     <ClCompile Include="ShadowMapFBO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ShadowMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oglDev_ShadowMapping.h">
@@ -29,12 +35,27 @@
     <ClInclude Include="ShadowMapFBO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ShadowMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shadowMap.vert">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="shadowMap.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="lighting.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="lighting.frag">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

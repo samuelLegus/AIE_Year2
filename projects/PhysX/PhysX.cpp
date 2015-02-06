@@ -55,24 +55,9 @@ bool PhysX::onCreate(int a_argc, char* a_argv[])
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 
-	//PHYSX SHIT
-	PxAllocatorCallback * myCallback = new myAllocator();	//HOKAY GHETTO C ALLOCATOR
-	g_PhysicsFoundation = PxCreateFoundation(PX_PHYSICS_VERSION, *myCallback, gDefaultErrorCallback);	//DEFAULT ERROR SHIT
-	g_Physics = PxCreatePhysics(PX_PHYSICS_VERSION, *g_PhysicsFoundation, PxTolerancesScale());			//SDK?
-	g_PhysicsCooker = PxCreateCooking(PX_PHYSICS_VERSION, *g_PhysicsFoundation, PxCookingParams(PxTolerancesScale())); //SDK?
-	PxInitExtensions(*g_Physics); //SDK?
-	//create physics material
-	g_PhysicsMaterial = g_Physics->createMaterial(.5f, .5f, .6f); //TO BE EXPLAINED
-	PxSceneDesc sceneDesc(g_Physics->getTolerancesScale()); //RENDERING YESSS
-	sceneDesc.gravity = PxVec3(0, -30.0f, 0);				//...
-	sceneDesc.filterShader = gDefaultFilterShader;			//...
-	sceneDesc.cpuDispatcher = PxDefaultCpuDispatcherCreate(1);	//MAKE THE CPU DO THE WORK I GUESS. EXPLAINED LATER?
-	g_PhysicsScene = g_Physics->createScene(sceneDesc);		//MAKE DA SCENE
-
-	if (g_PhysicsScene)
-	{
-		printf("Start PhysX scene2");						//
-	}
+	// Video tutorial stuff
+	setupPhysX();
+	
 
 	//UHHH?
 	//add a plane
@@ -133,6 +118,8 @@ void PhysX::onUpdate(float a_deltaTime)
 	{
 		// don’t need to do anything here yet but we still need to do the fetch
 	}
+
+	enableSphereGun();
 
 	for (auto actor : g_PhysXActors)
 	{
@@ -278,3 +265,52 @@ void PhysX::addGrid(const glm::vec3& a_center, const glm::mat4* a_transform, int
 		Gizmos::addLine(l2Start, l2End, colour);
 	}
 }
+
+//T2
+
+void PhysX::setupPhysX()
+{
+	PxAllocatorCallback * myCallback = new myAllocator();	//HOKAY GHETTO C ALLOCATOR - Have to use cause 64 bit OS
+	g_PhysicsFoundation = PxCreateFoundation(PX_PHYSICS_VERSION, *myCallback, gDefaultErrorCallback);	//DEFAULT ERROR SHIT
+	g_Physics = PxCreatePhysics(PX_PHYSICS_VERSION, *g_PhysicsFoundation, PxTolerancesScale());			//SDK?
+	g_PhysicsCooker = PxCreateCooking(PX_PHYSICS_VERSION, *g_PhysicsFoundation, PxCookingParams(PxTolerancesScale())); //SDK?
+	PxInitExtensions(*g_Physics); //SDK?
+	//create physics material
+	g_PhysicsMaterial = g_Physics->createMaterial(.5f, .5f, .6f); //TO BE EXPLAINED
+	PxSceneDesc sceneDesc(g_Physics->getTolerancesScale()); //RENDERING YESSS
+	sceneDesc.gravity = PxVec3(0, -30.0f, 0);				//...
+	sceneDesc.filterShader = gDefaultFilterShader;			//...
+	sceneDesc.cpuDispatcher = PxDefaultCpuDispatcherCreate(1);	//MAKE THE CPU DO THE WORK I GUESS. EXPLAINED LATER?
+	g_PhysicsScene = g_Physics->createScene(sceneDesc);		//MAKE DA SCENE
+
+	if (g_PhysicsScene)
+	{
+		printf("Start PhysX scene2");						//
+	}
+}
+
+void PhysX::enableSphereGun()
+{
+	if (glfwGetKey(m_window, GLFW_KEY_SPACE) == GLFW_PRESS)
+	{
+		float density = 10;
+
+		//add sphere
+		PxSphereGeometry sphere(2);	//I think the ctor takes a radius? Can't tell
+		//API for the ctor has a PxReal param, far as I can tell PxReal can be an integer or floating point value as well...
+
+		glm::vec3 cameraPosition(m_cameraMatrix[3]); //Get the camera position using the matrix4x4 in the framework
+		cameraPosition += glm::normalize(cameraPosition) * 15.0f; //Should make it so the sphere's spawn a bit in front of the camera 
+
+		PxTransform sphereTransform(PxVec3(cameraPosition.x, cameraPosition.y, cameraPosition.z)); //convert glm::vec3 to physX vec3
+
+		PxRigidDynamic * sphereDynamicActor = PxCreateDynamic(*g_Physics, sphereTransform, sphere, *g_PhysicsMaterial, density);
+		glm::vec3 velocity = glm::normalize(cameraPosition) * 25.0f;
+		sphereDynamicActor->setLinearVelocity(PxVec3(velocity.x, velocity.y, velocity.z));
+
+		g_PhysicsScene->addActor(*sphereDynamicActor);
+		g_PhysXActors.push_back(sphereDynamicActor);
+	}
+}
+
+

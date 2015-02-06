@@ -21,10 +21,16 @@ protected:
 	virtual void onDraw();
 	virtual void onDestroy();
 
+	//TUT1
 	void addWidget(PxShape* shape, PxRigidDynamic* actor);
 	void addBox(PxShape * pShape, PxRigidDynamic * actor);
 	void addSphere(PxShape * pShape, PxRigidDynamic * actor);
 	void addGrid(const glm::vec3& a_center, const glm::mat4* a_transform, int increments, float size);
+	//TUT2
+	void setupPhysX();
+	void enableSphereGun();
+
+
 
 	glm::mat4	m_cameraMatrix;
 	glm::mat4	m_projectionMatrix;
